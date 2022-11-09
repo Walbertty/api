@@ -10,6 +10,13 @@ usersRoutes.post("/", usersController.create)
 
 module.exports = usersRoutes
 
+
+
+
+
+
+
+
 /* deve ser usada na função "Router"
 function MyMiddleware(request, response, next) {
     console.log("você passou pelo MyMiddleware!")
