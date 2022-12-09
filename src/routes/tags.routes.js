@@ -1,15 +1,14 @@
 const { Router } = require("express")
 
-const UsersController = require("../controllers/UsersController")
+const TagsController = require("../controllers/TagsController")
 
-const usersRoutes = Router()
+const tagsRoutes = Router()
 
-const usersController = new UsersController()
+const tagsController = new TagsController()
 
-usersRoutes.post("/", usersController.create)
-usersRoutes.put("/:id", usersController.update)
+tagsRoutes.get("/:user_id", tagsController.index)
 
-module.exports = usersRoutes
+module.exports = tagsRoutes
 
 
 
