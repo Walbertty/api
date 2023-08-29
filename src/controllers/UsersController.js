@@ -28,7 +28,7 @@ class UsersController {
         const user_id = request.user.id;
 
         const database = await sqliteConnection()
-        const user = await database.get("SELECT * FROM users WHERE id = (?)", [user_id])
+        const user = await database.get("SELECT * FROM users WHERE id = (?)", [user_id]);
 
         if (!user) {
             throw new AppError("Usuário não encontrado")
